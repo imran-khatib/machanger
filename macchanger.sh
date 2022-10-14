@@ -15,12 +15,12 @@ read id
 
 if [[ $id = 1 ]]; then
 start=$( date +%s )
-echo "Changing MAC ID.... Wait..."
+echo "Changing MAC ID.... Wait..." && sleep 2s
 sudo ifconfig eth0 down
 
-sudo macchanger -r eth0
+sudo macchanger -r eth0 && sleep 2s
 
-sudo ifconfig eth0 up
+sudo ifconfig eth0 up && sleep 2s
 end=$( date +%s )
 timetaken=$(( $start - $end ))
 echo 
@@ -33,10 +33,10 @@ echo "++++++++++++++++++++++++++++++++++++++++++++++"
 elif [[ $id = 2 ]]; then
 
 start=$( date +%s )
-echo "Changing MAC ID.... Wait..."
+echo "Changing MAC ID.... Wait..." && sleep 2s
 sudo ifconfig wlan0 down
 
-sudo macchanger -r wlan0
+sudo macchanger -r wlan0 && sleep 2s
 
 sudo ifconfig wlan0 up
 end=$( date +%s )
