@@ -1,4 +1,4 @@
-# machanger
+# macchanger
 
 Required Tools
 macchanger
